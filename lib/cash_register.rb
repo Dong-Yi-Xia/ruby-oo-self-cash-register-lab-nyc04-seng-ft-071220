@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 require 'pry'
 
 class CashRegister
@@ -33,46 +32,9 @@ class CashRegister
 
     def void_last_transaction
         @total -= @last_total
-=======
-class CashRegister
-
-    attr_accessor :total :discount :items :last_amount
-
-    def initialize(discount = 0)
-      @total = 0
-      @discount = discount
-      @items = []
-    end
-
-    def add_item (item, price, count=1)
-      self.total += price * count
-      until count == 0
-        @items.push(item)
-        count -= 1
-      end
-      @last_amount = price * count
-
-    end
-
-
-    def apply_discount
-      if @discount != 0
-        # discount_price = self.total * 0.20
-        # self.total -= discount
-
-    end
-
-
-
-    def void_last_transaction
-
->>>>>>> fa954bed205c9bab829f7ecdf971d9ee88562f46
     end
 
 
 end
-<<<<<<< HEAD
 
 
-=======
->>>>>>> fa954bed205c9bab829f7ecdf971d9ee88562f46
