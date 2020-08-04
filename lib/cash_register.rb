@@ -3,7 +3,7 @@ require 'pry'
 
 class CashRegister
 
-    attr_accessor :discount, :total, :items, :last_total 
+    attr_accessor :discount, :total, :items, :last_total
 
     def initialize(discount = 0)
         @discount = discount
@@ -12,16 +12,16 @@ class CashRegister
     end
 
     def add_item(title, price, count = 1)
-        @total += price * count 
+        @total += price * count
         count.times do
             @items.push(title)
         end
-        @last_total = price * count 
+        @last_total = price * count
         # binding.pry
     end
 
     def apply_discount
-        if @discount > 0 
+        if @discount > 0
             amount_off = (@total * 0.20).to_i
             @total -= amount_off
             return "After the discount, the total comes to $#{@total}."
@@ -36,5 +36,3 @@ class CashRegister
 
 
 end
-
-
